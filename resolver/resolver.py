@@ -1,9 +1,9 @@
-from sceptre.resolvers import Resolver
+from sceptre.resolver import Resolver
 
 
-class CustomResolver(Resolver):
+class TestResolver(Resolver):
     def __init__(self, *args, **kwargs):
-        super(CustomResolver, self).__init__(*args, **kwargs)
+        super(TestResolver, self).__init__(*args, **kwargs)
 
     def resolve(self):
         """
@@ -11,4 +11,4 @@ class CustomResolver(Resolver):
         intended by this resolver. It should return a string to become the
         final value.
         """
-        return self.argument
+        return "TEST_RESOLVER_SUCCESS"
