@@ -11,7 +11,7 @@ jobs:
       - restore_cache:
           key:
             v1-dependency-cache-{{ checksum "setup.py" }}-{{ checksum "Makefile"
-            }}
+            }}-{{ .Environment.CACHE_VERSION }}
 
       - run:
           name: Install Dependencies
@@ -24,7 +24,7 @@ jobs:
       - save_cache:
           key:
             v1-dependency-cache-{{ checksum "setup.py" }}-{{ checksum "Makefile"
-            }}
+            }}-{{ .Environment.CACHE_VERSION }}
           paths:
             - 'venv'
 
@@ -52,7 +52,7 @@ jobs:
       - restore_cache:
           key:
             v1-dependency-cache-{{ checksum "setup.py" }}-{{ checksum "Makefile"
-            }}
+            }}{{ .Environment.CACHE_VERSION }}
 
       - run:
           name: Install Dependencies
@@ -65,7 +65,7 @@ jobs:
       - save_cache:
           key:
             v1-dependency-cache-{{ checksum "setup.py" }}-{{ checksum "Makefile"
-            }}
+            }}-{{ .Environment.CACHE_VERSION }}
           paths:
             - 'venv'
 
