@@ -1,4 +1,4 @@
-from resolver.resolver import TestResolver
+from resolver.test_resolver_fixture import TestResolver
 
 
 class TestStackActions:
