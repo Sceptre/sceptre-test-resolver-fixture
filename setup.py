@@ -50,7 +50,7 @@ setup(
         exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     py_modules=[RESOLVER_MODULE_NAME],
     entry_points={
-        'sceptre.resolvers': [
+        'sceptre.resolver': [
             "{}={}:{}".format(RESOLVER_COMMAND_NAME,
                               RESOLVER_MODULE_NAME, RESOLVER_CLASS)
         ]
